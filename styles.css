@@ -1,0 +1,15 @@
+body {
+  background-color: #66b3ff; /* light blue background for all pages */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #003366;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
