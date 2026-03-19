@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background-color: #f5f8fa; color: #1d2939; margin: 0; }
+header { display: flex; justify-content: center; padding: 12px; background: #1d6eff; }
+nav { display: flex; gap: 10px; }
+nav a { color: white; text-decoration: none; padding: 10px 14px; border: 2px solid #1d6eff; border-radius: 8px; background: #0d6b12; box-shadow: 0 0 0 3px rgba(13,107,18,0.3); }
+nav a:hover, nav a:focus { background: #0fa53b; box-shadow: 0 0 0 3px rgba(12,109,19,0.46); }
+main { padding: 20px; }
