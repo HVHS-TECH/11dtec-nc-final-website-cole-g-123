@@ -22,36 +22,120 @@
     <p>Select a competition to view fixtures and ladder tables (CricInfo-style format).</p>
 
     <section class="competition-list">
-      <div class="competition-item">
+      <div class="competition-item" data-competition="ipl">
         <h2>Indian Premier League (IPL)</h2>
         <p>Twenty20 franchise league.</p>
-        <a href="#">View fixtures & results</a>
+        <button class="view-btn">View fixtures & results</button>
       </div>
 
-      <div class="competition-item">
+      <div class="competition-item" data-competition="county">
         <h2>County Championship</h2>
         <p>England first-class competition.</p>
-        <a href="#">View fixtures & results</a>
+        <button class="view-btn">View fixtures & results</button>
       </div>
 
-      <div class="competition-item">
+      <div class="competition-item" data-competition="sheffield">
         <h2>Sheffield Shield</h2>
         <p>Australia first-class competition.</p>
-        <a href="#">View fixtures & results</a>
+        <button class="view-btn">View fixtures & results</button>
       </div>
 
-      <div class="competition-item">
+      <div class="competition-item" data-competition="bbl">
         <h2>Big Bash League (BBL)</h2>
         <p>Australia T20 competition.</p>
-        <a href="#">View fixtures & results</a>
+        <button class="view-btn">View fixtures & results</button>
       </div>
 
-      <div class="competition-item">
+      <div class="competition-item" data-competition="supersmash">
         <h2>Super Smash</h2>
         <p>New Zealand T20 competition.</p>
-        <a href="#">View fixtures & results</a>
+        <button class="view-btn">View fixtures & results</button>
       </div>
     </section>
+
+    <section id="fixtures-display" class="fixtures-display hidden">
+      <header class="fixtures-header">
+        <h2 id="fixtures-title">Competition details</h2>
+        <button id="back-list" class="back-btn">Back to competitions</button>
+      </header>
+
+      <div id="fixtures-content"></div>
+    </section>
   </main>
+
+  <script>
+    const competitionData = {
+      ipl: {
+        title: 'IPL 2025 - Latest Fixtures & Results',
+        matches: [
+          { fixture: 'CSK vs MI', date: '2025-04-01', result: 'CSK won by 34 runs' },
+          { fixture: 'RCB vs SRH', date: '2025-04-02', result: 'RCB won by 6 wickets' },
+          { fixture: 'KKR vs LSG', date: '2025-04-03', result: 'Match postponed' }
+        ]
+      },
+      county: {
+        title: 'County Championship 2025 - Latest Fixtures & Results',
+        matches: [
+          { fixture: 'Yorkshire vs Surrey', date: '2025-05-12', result: 'Yorkshire leads by 3 wickets' },
+          { fixture: 'Lancashire vs Essex', date: '2025-05-13', result: 'Essex won by 8 runs' }
+        ]
+      },
+      sheffield: {
+        title: 'Sheffield Shield 2025 - Latest Fixtures & Results',
+        matches: [
+          { fixture: 'Victoria vs NSW', date: '2025-10-09', result: 'In progress: NSW 270/5' },
+          { fixture: 'Qld vs SA', date: '2025-10-10', result: 'Qld won by 2 wickets' }
+        ]
+      },
+      bbl: {
+        title: 'BBL 2025/26 - Latest Fixtures & Results',
+        matches: [
+          { fixture: 'Hobart Hurricanes vs Sydney Thunder', date: '2025-12-05', result: 'Hurricanes won by 15 runs' },
+          { fixture: 'Melbourne Stars vs Perth Scorchers', date: '2025-12-06', result: 'Scorchers won by 2 wickets' }
+        ]
+      },
+      supersmash: {
+        title: 'Super Smash 2025/26 - Latest Fixtures & Results',
+        matches: [
+          { fixture: 'Wellington Firebirds vs Auckland Aces', date: '2025-12-11', result: 'Aces won by 22 runs' },
+          { fixture: 'Canterbury Kings vs Otago Volts', date: '2025-12-12', result: 'Volts won by 8 wickets' }
+        ]
+      }
+    };
+
+    const display = document.getElementById('fixtures-display');
+    const titleElm = document.getElementById('fixtures-title');
+    const contentElm = document.getElementById('fixtures-content');
+    const backBtn = document.getElementById('back-list');
+
+    const showCompetition = key => {
+      const competition = competitionData[key];
+      if (!competition) return;
+
+      titleElm.textContent = competition.title;
+      contentElm.innerHTML = competition.matches.map(m => `
+        <div class="widget">
+          <h3>${m.fixture}</h3>
+          <p><strong>Date:</strong> ${m.date}</p>
+          <p><strong>Result:</strong> ${m.result}</p>
+        </div>
+      `).join('');
+
+      display.classList.remove('hidden');
+      document.querySelector('.competition-list').classList.add('hidden');
+    };
+
+    document.querySelectorAll('.view-btn').forEach(btn => {
+      btn.addEventListener('click', event => {
+        const key = event.target.closest('.competition-item').dataset.competition;
+        showCompetition(key);
+      });
+    });
+
+    backBtn.addEventListener('click', () => {
+      display.classList.add('hidden');
+      document.querySelector('.competition-list').classList.remove('hidden');
+    });
+  </script>
 </body>
 </html>

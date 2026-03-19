@@ -147,8 +147,51 @@ a:hover {
   color: #e8edff;
 }
 
-.competition-item a {
+.competition-item a,
+.competition-item button.view-btn {
   color: #ffd54f;
   font-weight: 600;
+  border: 1px solid #ffd54f;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
 }
+
+.competition-item button.view-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.fixtures-display {
+  margin-top: 18px;
+}
+
+.fixtures-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.back-btn {
+  color: #fff;
+  background: #1677ff;
+  border: 1px solid #6ec1f3;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #469bff;
+}
+
+#fixtures-content .widget {
+  margin-bottom: 12px;
+}
+
 
