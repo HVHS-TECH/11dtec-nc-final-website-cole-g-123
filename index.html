@@ -1,24 +1,46 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html lang="en">
-<link href="styles.css" rel="stylesheet">
-
 <head>
-<title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+  <title>CricInfo-style Layout</title>
 </head>
 <body>
+  <header class="topbar">
+    <div class="brand">Cricket Info</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="fixturesresultsandladders.html">Fixtures</a>
+      <a href="competitionstats.html">Stats</a>
+      <a href="internationalcricket.html">International</a>
+    </nav>
+  </header>
 
-<img src="download (3).png" alt="Cricket" style="width:300px; height:auto; position:absolute; top:10px; left:10px;">
+  <main class="container">
+    <section class="hero">
+      <img src="download (3).png" alt="Cricket" class="hero-img">
+      <div class="hero-text">
+        <h1>Your go-to cricket website</h1>
+        <p>Latest scores, news, and analytics in one place—CricInfo-inspired theme</p>
+      </div>
+    </section>
 
-<div style="position:absolute; top:10px; left:50%; transform:translateX(-50%);">
-    <a href="index.html">Home</a> |
-    <a href="fixturesresultsandladders.html">Fixtures, Results and Ladders</a> |
-    <a href="competitionstats.html">Competition Stats</a> |
-    <a href="internationalcricket.html">International Cricket</a>
-</div>
-
-<h1 style="margin-top:140px;">Your go-to cricket website</h1>
-
+    <section class="content-grid">
+      <article class="widget">
+        <h2>Live Scores</h2>
+        <p>Match updates and live scorecards appear here.</p>
+      </article>
+      <article class="widget">
+        <h2>Results</h2>
+        <p>Recent fixtures and results in every tournament.</p>
+      </article>
+      <article class="widget">
+        <h2>Rankings</h2>
+        <p>Team and player rankings updated daily.</p>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
 

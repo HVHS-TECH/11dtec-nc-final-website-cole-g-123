@@ -1,15 +1,118 @@
+/* Global base */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #66b3ff; /* light blue background for all pages */
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #3a6fb8 0%, #1f4d93 100%);
+  color: #ffffff;
 }
 
 a {
-  color: #003366;
+  color: #ffe100;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #092f6b;
+  border-bottom: 2px solid #ffa900;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar a {
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.container {
+  width: min(1120px, 95%);
+  margin: 0 auto;
+  padding: 120px 0 40px; /* leave space for sticky nav */
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background: rgba(0, 9, 57, 0.45);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-img {
+  width: clamp(250px, 28vw, 360px);
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+}
+
+.hero-text {
+  max-width: 620px;
+  color: #ffffff;
+}
+
+.hero-text h1 {
+  margin-top: 0;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.hero-text p {
+  margin-bottom: 0;
+  color: #f6f7f8;
+  line-height: 1.5;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.widget {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  padding: 16px;
+}
+
+.widget h2 {
+  margin-top: 0;
+  color: #ffd54f;
+}
+
+.widget p {
+  margin-bottom: 0;
+  color: #e7f0ff;
 }
