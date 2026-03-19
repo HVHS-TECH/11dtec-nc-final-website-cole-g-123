@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html lang="en">
-    <a href="index.html">Home</a>
-    <a href="fixturesresultsandladders.html">Fixtures, Results and Ladders</a>
-    <a href="competitionstats.html">Competition Stats</a>
-    <a href="internationalcricket.html">International Cricket</a>
- <link href="styles.css" rel="stylesheet">
-
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <header class="navbar">
+        <a class="logo" href="index.html">Cricket Hub</a>
+        <nav class="nav-links" id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="fixturesresultsandladders.html">Fixtures, Results and Ladders</a>
+            <a href="competitionstats.html">Competition Stats</a>
+            <a href="internationalcricket.html">International Cricket</a>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+    </header>
 
-<h1>You go-to cricket website</h1>
-<img src="download (3).png">
+    <main class="content">
+        <h1>You go-to cricket website</h1>
+        <img src="download (3).png" alt="Cricket image">
+    </main>
 
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('main-nav');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
 
