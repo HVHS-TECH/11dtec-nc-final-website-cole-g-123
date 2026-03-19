@@ -116,3 +116,39 @@ a:hover {
   margin-bottom: 0;
   color: #e7f0ff;
 }
+
+.competition-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.competition-item {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  padding: 14px;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.competition-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.competition-item h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.competition-item p {
+  margin: 0 0 12px;
+  color: #e8edff;
+}
+
+.competition-item a {
+  color: #ffd54f;
+  font-weight: 600;
+}
+
