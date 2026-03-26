@@ -1,3 +1,14 @@
-
+ head, body{
+    background-color: teal;
+ }
+ h1{background-color: red;}
+ 
+    .topbar{
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+}
 
 
