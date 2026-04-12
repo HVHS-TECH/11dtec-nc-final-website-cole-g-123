@@ -20,6 +20,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-top: -180px;
 }
 
 .link-box {
