@@ -42,11 +42,16 @@ body {
 
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 22px;
   flex-wrap: wrap;
   padding: 20px 0;
+}
+
+.hero-text {
+  max-width: 520px;
+  text-align: left;
 }
 
 .hero-img {
