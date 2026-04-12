@@ -1,13 +1,120 @@
- head, body{
-    background-color: teal;
- }
- 
-    .topbar{
-        background-color: black;
-        color: white;
-        padding: 10px;
-        text-align: center;
-    }
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: teal;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.topbar {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.topbar .brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar {
+  margin-top: 8px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.widget,
+.link-box {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.widget h2,
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar h2 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.link-box a {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #006699;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link-box p {
+  margin: 0;
+  color: #333;
+}
+
+@media (max-width: 800px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
 }
 
 
