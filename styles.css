@@ -8,7 +8,7 @@ html, body {
 .container {
   width: min(1200px, 95%);
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
 }
 .hero-img {
